@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+  <h:form id="login">
+    <h3>JSF Login Logout</h3>
+    <h:outputText value="Username" />
+    <h:inputText id="username" value="#{login.user}"></h:inputText>
+    <h:message for="username"></h:message>
+    <br></br><br></br>
+
+    <h:outputText value="Password" />
+    <h:inputSecret id="password" value="#{login.pwd}"></h:inputSecret>
+    <h:message for="password"></h:message>
+    <br></br><br></br>
+
+    <h:commandButton id="ingresar" action="#{login.ingresar}"
+                     value="Login"></h:commandButton>
+  </h:form>
+  
+  <h:outputText value="#{login.msg}" id="output_msg"></h:outputText>
+  
+</html>
